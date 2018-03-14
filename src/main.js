@@ -3,8 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-// 支持less,less文件入口文件
+
+// 支持less、stylus,文件入口文件
 import './style/main'
+// 手机适配
+import './assets/js/mobileAdaptation'
 
 Vue.config.productionTip = false
 
