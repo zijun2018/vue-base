@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+// 支持less,less文件入口文件
+import './style/main'
 
 Vue.config.productionTip = false
 
