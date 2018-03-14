@@ -1,8 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
+Vue.use(Router);
+
+// views层
 import HelloWorld from '@/components/HelloWorld'
 
-Vue.use(Router)
+
+// components层
+
 
 export default new Router({
   // HTML5 History 模式
