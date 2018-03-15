@@ -1,6 +1,6 @@
-/* 清除默认样式，设置公共样式 */
-/* author: daijun<zijun2030@gmail.com> */
-/* time: 20180314 */
+/* Description: 清除默认样式，设置公共样式 */
+/* Author: daijun<zijun2030@gmail.com> */
+/* Time: 2018/3/15 */
 
 body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, pre,
 dl, dt, dd, ul, ol, li, th, td, div, span, img,
@@ -8,19 +8,56 @@ fieldset, lengend, button, input, select, textarea,
   margin 0
   padding 0
 
-/* color & background */
+/* color & font & background */
 html,body
+  min-height 100%
   color color-white
   background color-black
-  min-height 100%
 
+body,button, input, select, textarea
+  font font-Set
 
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: .6rem;
-  font-size: .14rem;
-}
+body
+  min-width 2.8rem
+  max-width 7.5rem
+
+/* h1 ~ h6 */
+h1, h2, h3, h4, h5, h6
+  font-weight normal
+h1
+  font-size font-20
+h2
+  font-size font-18
+h3
+  font-size font-16
+h4,h5,h6
+  font-size 100%
+
+/* a */
+a
+  text-decoration none;
+  color #232323;
+
+/* list */
+ul, ol
+  list-style none
+
+/* img */
+img
+  border none
+  vertical-align middle
+
+/* table */
+table
+  border-collapse collapse
+  border-spacing 0
+  table-layout fixed
+
+/* input & textArea */
+input, textarea
+  outline none
+  border none
+
+textarea
+  resize none
+  overflow auto
