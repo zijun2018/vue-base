@@ -1,0 +1,23 @@
+/* Description: 常用全局样式方法设置 */
+/* Author: daijun<zijun2030@gmail.com> */
+/* Time: 2018/3/15 */
+
+/* 多行省略,默认2行省略 */
+ellipse(row = 2)
+  overflow hidden
+  text-overflow ellipsis
+  word-break normal
+  display -webkit-box
+  -webkit-line-clamp row
+  -webkit-box-orient vertical
+
+
+/* 模糊效果 */
+blur-tool(blur = 2px)
+  -webkit-filter blur(blur)
+  -moz-filter blur(blur)
+  -o-filter blur(blur)
+  -ms-filter blur(blur)
+  filter blur(blur)
+
+

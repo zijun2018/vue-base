@@ -4,18 +4,18 @@
 
 body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, pre,
 dl, dt, dd, ul, ol, li, th, td, div, span, img,
-fieldset, lengend, button, input, select, textarea,
+fieldset, lengend, button, input, select, textarea
   margin 0
   padding 0
 
 /* color & font & background */
 html,body
   min-height 100%
-  color color-white
-  background color-black
+  color color-black
+  background color-white
 
-body,button, input, select, textarea
-  font font-Set
+body, button, input, select, textarea
+  font font-14/1.5 font-Set
 
 body
   min-width 2.8rem
@@ -61,3 +61,60 @@ input, textarea
 textarea
   resize none
   overflow auto
+
+/* normalize css */
+
+/* 单行省略, 多行省略.ellipse() */
+.ellipse
+  overflow hidden
+  text-overflow ellipsis
+  white-space nowrap
+
+/* flex layout */
+.flex
+  display flex
+
+/* 主轴横向排布 */
+.flex-row
+  @extend .flex
+  flex-direction row
+
+/* 主轴纵向排布 */
+.flex-column
+  @extend .flex
+  flex-direction column
+
+/* 主轴横向排布，内容横向(水平)居中 */
+.flex-row-row-center
+  @extend .flex-row
+  justify-content center
+
+/* 主轴横向排布，内容两端对齐 */
+.flex-row-between
+  @extend .flex-row
+  justify-content space-between
+
+/* 主轴横向排布，内容纵向（垂直）居中 */
+.flex-row-column-center
+  @extend .flex-row
+  align-items center
+
+/* 主轴纵轴排列，内容纵向（垂直）居中 */
+.flex-column-column-center
+  @extend .flex-column
+  justify-content center
+
+/* 主轴纵轴排列，内容纵向（垂直）居中 */
+.flex-column-between
+  @extend .flex-column
+  justify-content space-between
+
+/* 主轴纵轴排列，内容横向（水平）居中 */
+.flex-column-row-center
+  @extend .flex-column
+  align-items center
+
+/* 主轴横向排列，内容横向（水平）和纵向（垂直）同时居中 */
+.flex-center
+  @extend .flex-row-row-center
+  align-items center

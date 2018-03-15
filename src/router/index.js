@@ -4,7 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router);
 
 // views层
-import HelloWorld from '@/components/HelloWorld'
+import Index from '@/views/index'
 
 
 // components层
@@ -24,10 +24,17 @@ export default new Router({
     }
   },
   routes: [
+    // 根目录,重定向至index页面
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'root',
+      redirect: {name: 'index'}
+    },
+    // 项目首页
+    {
+      path: '/index',
+      name: 'index',
+      component:  Index
     }
   ]
 })
