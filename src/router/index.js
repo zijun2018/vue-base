@@ -5,6 +5,7 @@ Vue.use(Router);
 
 // views层
 import Index from '@/views/index'
+import Test from '@/views/test'
 
 
 // components层
@@ -35,6 +36,12 @@ export default new Router({
       path: '/index',
       name: 'index',
       component:  Index
+    },
+    // 测试文件
+    {
+      path: '/test',
+      name: 'test',
+      component: Test
     }
   ]
 })
