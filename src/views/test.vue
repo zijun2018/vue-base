@@ -1,21 +1,22 @@
 <template>
   <div class="app-test">
-    <p>{{desTxt}}：{{name}}</p>
+    <p>{{desTxt}}：{{testName}}</p>
     <p>姓：{{firstName}}</p>
     <p>名：{{lastName}}</p>
     <p>全名：{{fullName}}</p>
+    <p>年龄：{{testAge}}</p>
   </div>
 </template>
 
 <script>
-  import {mapState, mapGetters, mapMutations} from 'vuex'
+  import {mapState, mapGetters, mapMutations, mapActions} from 'vuex'
 
   export default {
     name: "test",
 
     data() {
       return {
-        msg: this.$store.state.name,
+        msg: this.$store.state.test.name,
         desTxt: '原名',
       }
     },
@@ -30,7 +31,10 @@
       },
 
       // globalState
-      ...mapState(['name']),
+      ...mapState({
+        testName: state => state.test.name,
+        testAge: state => state.test.age
+      }),
 
       // globalComputed
       ...mapGetters(['fullName'])
@@ -39,13 +43,16 @@
     mounted() {
       setTimeout(() => {
         this.desTxt = '变更后的姓名';
-        this.CONSTRUCTION({firstName: 'first', lastName: 'last'});
+        this.CONSTRUCTION({firstName: 'lalala', lastName: 'hahaha'});
+        this.changeName({firstName: 'liu', lastName: 'jing'})
       }, 3000);
+
 
     },
 
     methods: {
       ...mapMutations(['CONSTRUCTION']),
+      ...mapActions(['changeName']),
     }
   }
 </script>

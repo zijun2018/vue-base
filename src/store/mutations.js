@@ -3,9 +3,5 @@
 /* Time: 2018/3/19 */
 
 export default {
-  // 测试变更
-  CONSTRUCTION (state,{firstName, lastName}) {
-    state.name = 'hello world ' + firstName + lastName;
-  }
 
 }
