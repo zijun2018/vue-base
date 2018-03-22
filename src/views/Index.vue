@@ -1,6 +1,11 @@
 <template>
   <div class="views-index flex-center">
-    <div>{{ msg }}</div>
+    <div class="flex-row-column-center">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-dengpao"></use>
+      </svg>
+      <i class="iconfont">&#xe992;</i>
+      <span class="fa fa-spinner" aria-hidden="true"></span>{{ msg }}</div>
   </div>
 </template>
 
@@ -10,7 +15,7 @@
 
     data() {
       return {
-        msg: '主页22'
+        msg: '主页'
       }
     },
 

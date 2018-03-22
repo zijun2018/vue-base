@@ -4,8 +4,8 @@ import Router from 'vue-router'
 Vue.use(Router);
 
 // views层
-import Index from '@/views/index'
-import Test from '@/views/test'
+import Index from '@/views/Index'
+import Test from '@/views/Test'
 
 
 // components层

@@ -10,10 +10,13 @@ import store from './store'
 import './style/main'
 // 手机适配
 import './assets/js/mobileAdaptation'
-// 支持移动端调试vconsole工具
+// 支持移动端调试VConsole工具
 import VConsole from 'vconsole'
 new VConsole();
-
+// 全局引入font-awesome，version=4.7.0
+import 'font-awesome/css/font-awesome.min.css'
+// 全局引入阿里iconFont字体库
+import './assets/js/iconfont'
 
 Vue.config.productionTip = false;
 
