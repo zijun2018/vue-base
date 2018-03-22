@@ -10,6 +10,10 @@ import store from './store'
 import './style/main'
 // 手机适配
 import './assets/js/mobileAdaptation'
+// 支持移动端调试vconsole工具
+import VConsole from 'vconsole'
+new VConsole();
+
 
 Vue.config.productionTip = false;
 

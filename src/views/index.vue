@@ -10,16 +10,18 @@
 
     data() {
       return {
-        msg: '主页'
+        msg: '主页22'
       }
     },
 
     mounted() {
-
+      this.alertText();
     },
 
     methods: {
-
+      alertText() {
+        console.log('123');
+      }
     }
   }
 </script>
