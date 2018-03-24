@@ -17,6 +17,9 @@ new VConsole();
 import 'font-awesome/css/font-awesome.min.css'
 // 全局引入阿里iconFont字体库
 import './assets/js/iconfont'
+// 注册的全局组件
+import globalComponents from './components/global/main'
+Vue.use(globalComponents);
 
 Vue.config.productionTip = false;
 

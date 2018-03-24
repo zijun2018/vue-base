@@ -23,3 +23,6 @@ export default new vuex.Store({
   modules,
   strict: debug
 });
+
+
+

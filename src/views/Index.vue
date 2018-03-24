@@ -5,7 +5,9 @@
         <use xlink:href="#icon-dengpao"></use>
       </svg>
       <i class="iconfont">&#xe992;</i>
-      <span class="fa fa-spinner global-z-loading" aria-hidden="true"></span>{{ msg }}</div>
+      <span class="fa fa-spinner" aria-hidden="true"></span>{{ msg }}</div>
+    <z-loading :type="1
+"></z-loading>
   </div>
 </template>
 
