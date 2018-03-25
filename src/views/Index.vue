@@ -6,8 +6,7 @@
       </svg>
       <i class="iconfont">&#xe992;</i>
       <span class="fa fa-spinner" aria-hidden="true"></span>{{ msg }}</div>
-    <z-loading :type="1
-"></z-loading>
+    <z-loading></z-loading>
   </div>
 </template>
 

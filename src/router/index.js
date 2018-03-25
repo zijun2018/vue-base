@@ -3,13 +3,8 @@ import Router from 'vue-router'
 
 Vue.use(Router);
 
-// views层
-import Index from '@/views/Index'
-import Test from '@/views/Test'
-
-
-// components层
-
+// 引入路由文件
+import routes from './routes'
 
 export default new Router({
   // HTML5 History 模式
@@ -24,24 +19,5 @@ export default new Router({
       return { x: 0, y: 0 }
     }
   },
-  routes: [
-    // 根目录,重定向至index页面
-    {
-      path: '/',
-      name: 'root',
-      redirect: {name: 'index'}
-    },
-    // 项目首页
-    {
-      path: '/index',
-      name: 'index',
-      component:  Index
-    },
-    // 测试文件
-    {
-      path: '/test',
-      name: 'test',
-      component: Test
-    }
-  ]
+  routes
 })

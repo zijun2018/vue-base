@@ -9,17 +9,21 @@ fieldset, lengend, button, input, select, textarea
   padding 0
 
 /* color & font & background */
-html,body
-  min-height 100%
-  color color-black
-  background color-white
+html, body, #app
+  height 100%
 
 body, button, input, select, textarea
   font font-14/1.5 font-Set
 
 body
   min-width 2.8rem
-  //max-width 7.5rem
+  color color-black
+  background color-white
+  #app
+    position relative
+    min-height 100%
+    box-sizing border-box
+
 
 /* h1 ~ h6 */
 h1, h2, h3, h4, h5, h6
@@ -69,6 +73,15 @@ textarea
   overflow hidden
   text-overflow ellipsis
   white-space nowrap
+
+/* 全局icon-font svg字体大小设置 */
+svg.icon
+  width 1em;
+  height 1em
+  vertical-align: -0.15em
+  fill currentColor
+  overflow hidden
+
 
 /* flex layout */
 .flex
