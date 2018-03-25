@@ -20,23 +20,38 @@ blur-tool(blur = 2px)
   -ms-filter blur(blur)
   filter blur(blur)
 
-/* 移动端0.5px的实现基础样式 */
-.scale-border-base
-  position relative
-  &::after
-    content ''
-    display block
-    position absolute
-    left -50%
-    width 200%
-    height 200%
-    transform scale(0.5)
-
-/* 移动端0.5px的四周边框实现 */
+/**
+* 移动端0.5px的四周边框实现， 基础样式和class样式可见layout.styl中
+*
+* colorVal 四周边框颜色
+* radiusVal 四周边框圆角
+* bgColorVal 按钮内北京颜色
+*/
 scale-border(colorVal = color-base, radiusVal = 5px, bgColorVal = color-base)
   @extend .scale-border-base
   &::after
     border 1px solid colorVal
     border-radius radiusVal
-    //background-color bgColorVal
+    background-color bgColorVal
+
+/**
+* 移动端0.5px的上边框实现
+*
+* colorVal 上边框颜色
+*/
+scale-border-top(colorVal = color-line)
+  @extend .scale-border-base
+  &::after
+    border-top 1px solid colorVal
+
+/**
+* 移动端0.5px的下边框实现
+*
+* colorVal 下边框颜色
+*/
+scale-border-bottom(colorVal = color-line)
+  @extend .scale-border-base
+  &::after
+    border-bottom 1px solid colorVal
+
 

@@ -1,6 +1,13 @@
 /* Description: 清除默认样式，设置公共样式 */
 /* Author: daijun<zijun2030@gmail.com> */
 /* Time: 2018/3/15 */
+/*
+* 公共样式
+* 单行省略, 多行省略.ellipse()
+* 全局icon-font svg字体大小设置
+* 0.5px 细线
+* flex layout
+*/
 
 body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, pre,
 dl, dt, dd, ul, ol, li, th, td, div, span, img,
@@ -82,6 +89,41 @@ svg.icon
   fill currentColor
   overflow hidden
 
+/* 0.5px 细线 */
+/* 移动端0.5px的实现基础样式 */
+.scale-border-base
+  position relative
+  margin 0 auto
+  height 100%
+  width  100%
+  &::after
+    content: '';
+    transform:scale(0.5);
+    position:absolute;
+    top:-50%;
+    right:-50%;
+    bottom:-50%;
+    left:-50%;
+
+/* 移动端0.5px的四周边框实现 */
+.scale-border
+  @extend .scale-border-base
+  &::after
+    border 1px solid color-base
+    border-radius 5px
+    background-color color-base
+
+/* 移动端0.5px的上边框实现 */
+.scale-border-top
+  @extend .scale-border-base
+  &::after
+    border-top 1px solid color-line
+
+/* 移动端0.5px的下边框实现 */
+.scale-border-bottom
+  @extend .scale-border-base
+  &::after
+    border-bottom 1px solid color-line
 
 /* flex layout */
 .flex

@@ -3,7 +3,7 @@
 <!-- Time: 2018/3/25 -->
 
 <template>
-  <div class="global-z-button flex-center"
+  <div class="global-z-button scale-border-base flex-center"
        :class="computedBtnType(btnType)">
       <p v-html="btnTxt"></p>
   </div>
