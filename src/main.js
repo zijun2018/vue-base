@@ -21,13 +21,11 @@ import './assets/js/iconfont'
 import globalComponents from './components/global/main'
 Vue.use(globalComponents);
 // 支持点击水波纹效果
-import VueTouchRipple from 'vue-touch-ripple'
-Vue.use(VueTouchRipple, {
-  color: '#fff',
-  opacity: 0.35,
-  speed: 1,
-  transition: 'ease'
-});
+import Ripple from 'vue-ripple-directive'
+Ripple.color = 'rgba(255, 255, 255, 0.5)';
+Ripple.zIndex = 1000;
+Vue.directive('ripple', Ripple);
+
 
 Vue.config.productionTip = false;
 

@@ -9,7 +9,7 @@
       <span class="iconfont">&#xe6e3;</span>
 
       <!-- 提示文字 -->
-      <p class="views-error-txt">抱歉！你可能被迷失了...(404)</p>
+      <p class="views-error-txt" v-ripple>抱歉！你可能被迷失了...(404)</p>
 
       <!-- 返回按钮 -->
       <div class="views-error-button">

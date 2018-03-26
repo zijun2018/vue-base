@@ -4,7 +4,7 @@
 
 <template>
   <!-- 点击，背景颜色变深效果 -->
-  <div class="global-z-button">
+  <div class="global-z-button" v-ripple>
     <!-- 按钮 -->
     <div class="global-z-button-common scale-border-base flex-center"
          :class="btnType"
@@ -13,13 +13,11 @@
     </div>
 
     <!-- 带涟漪效果的按钮 -->
-    <touch-ripple
-      v-if="btnType === 'ripple'">
       <div class="global-z-button-common scale-border-base flex-center"
-           :class="btnType">
+           :class="btnType"
+           v-if="btnType === 'ripple'">
         <p v-html="btnTxt"></p>
       </div>
-    </touch-ripple>
   </div>
 </template>
 
