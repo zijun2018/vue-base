@@ -9,20 +9,22 @@ export default [
   {
     path: '/',
     component: () => import('@/components/global/main'),
-    children: [
-      { path: '',
-        component: () => import('@/views/Index')
-      }
-    ]
+    redirect: {name: 'index'},
   },
-  // 测试文件
+  {
+    path: '/index',
+    name: 'index',
+    component: () => import('@/views/Index')
+  },
+  // 测试页面
   {
     path: '/test',
     name: 'test',
     component: () => import('@/views/Test')
   },
+  // 404错误页面
   {
     path: '*',
-    component: () => import('@/views/error')
+    component: () => import('@/views/Error')
   }
 ]

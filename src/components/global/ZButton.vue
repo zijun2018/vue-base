@@ -3,9 +3,23 @@
 <!-- Time: 2018/3/25 -->
 
 <template>
-  <div class="global-z-button scale-border-base flex-center"
-       :class="computedBtnType(btnType)">
+  <!-- 点击，背景颜色变深效果 -->
+  <div class="global-z-button">
+    <!-- 按钮 -->
+    <div class="global-z-button-common scale-border-base flex-center"
+         :class="btnType"
+         v-if="btnType !== 'ripple'">
       <p v-html="btnTxt"></p>
+    </div>
+
+    <!-- 带涟漪效果的按钮 -->
+    <touch-ripple
+      v-if="btnType === 'ripple'">
+      <div class="global-z-button-common scale-border-base flex-center"
+           :class="btnType">
+        <p v-html="btnTxt"></p>
+      </div>
+    </touch-ripple>
   </div>
 </template>
 
@@ -24,17 +38,17 @@
     },
 
     methods: {
-      // 计算按钮传入值，返回不同的按钮样式
+/*      // 计算按钮传入值，返回不同的按钮样式
       computedBtnType(val) {
-        switch (Number(val)) {
-          case 1:
-            return '';
+        switch (val) {
+          case 'darken':
+            return 'dar';
           case 2:
             return '';
           case 3:
             return '';
         }
-      }
+      }*/
     },
 
     watch: {}

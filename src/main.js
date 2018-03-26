@@ -20,6 +20,14 @@ import './assets/js/iconfont'
 // 注册的全局组件
 import globalComponents from './components/global/main'
 Vue.use(globalComponents);
+// 支持点击水波纹效果
+import VueTouchRipple from 'vue-touch-ripple'
+Vue.use(VueTouchRipple, {
+  color: '#fff',
+  opacity: 0.35,
+  speed: 1,
+  transition: 'ease'
+});
 
 Vue.config.productionTip = false;
 

@@ -5,11 +5,19 @@
 <template>
   <div class="views-error flex-center">
     <div class="flex-column-row-center">
+      <!-- error图标 -->
       <span class="iconfont">&#xe6e3;</span>
+
+      <!-- 提示文字 -->
       <p class="views-error-txt">抱歉！你可能被迷失了...(404)</p>
+
+      <!-- 返回按钮 -->
       <div class="views-error-button">
-        <z-button :btnTxt="btnTxt"></z-button>
+        <z-button
+          :btnType="btnType"
+          :btnTxt="btnTxt"></z-button>
       </div>
+
     </div>
   </div>
 </template>
@@ -20,7 +28,8 @@
 
     data() {
       return {
-        btnTxt: '返回首页'
+        btnTxt: '返回首页',
+        btnType: 'ripple'
       }
     },
 
