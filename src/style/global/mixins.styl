@@ -54,4 +54,12 @@ scale-border-bottom(colorVal = color-line)
   &::after
     border-bottom 1px solid colorVal
 
-
+/**
+ * 阴影效果 shadows
+ */
+/* 盒子下阴影 */
+shadow-bottom()
+  box-shadow 0 .03rem .05rem -.01rem rgba(0,0,0,.2), 0 .05rem .08rem rgba(0,0,0,.14), 0 .01rem .14rem rgba(0,0,0,.12);
+/* 盒子上阴影 */
+shadow-top()
+  box-shadow 0 .03rem .05rem -.01rem rgba(0,0,0,.2), 0 -.05rem .08rem rgba(0,0,0,.14), 0 -01rem .14rem rgba(0,0,0,.12);

@@ -4,8 +4,10 @@
 
 import ZLoading from './ZLoading'
 import ZButton from './ZButton'
+import ZRipple from './ZRipple'
 
 export default Vue => {
   Vue.component('z-loading', ZLoading);
   Vue.component('z-button', ZButton);
+  Vue.component('z-ripple', ZRipple);
 }

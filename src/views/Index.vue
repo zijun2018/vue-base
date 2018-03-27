@@ -6,7 +6,7 @@
       </svg>
       <i class="iconfont">&#xe992;</i>
       <span class="fa fa-spinner" aria-hidden="true"></span>{{ msg }}</div>
-    <z-loading></z-loading>
+    <z-loading :loadType="loadType"></z-loading>
   </div>
 </template>
 
@@ -16,7 +16,9 @@
 
     data() {
       return {
-        msg: '主页'
+        msg: '主页',
+
+        loadType: '1',
       }
     },
 

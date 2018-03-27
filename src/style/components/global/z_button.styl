@@ -5,25 +5,25 @@
 .global-z-button
   width 100%
   height 100%
-  .global-z-button-common
-    p
-      position relative
-      z-index 10
-      color color-white
+  p
+    position relative
+    z-index 10
+    color color-white
+    height 100%
+
   // 颜色加深效果
-  .darken
-    scale-border()
+.darken
+  scale-border()
   &:active
-    scale-border(darken(color-base, 30%), radius-base, darken(color-base, 30%))
-  // 点击有颜色效果
-  .appearance
-    scale-border(color-base, radius-base, color-white)
-    p
-      color color-base
+   scale-border(darken(color-base, 30%), radius-base, darken(color-base, 30%))
+
+// 点击有颜色效果
+.appearance
+  scale-border(color-base, radius-base, color-white)
+  p
+    color color-base
   &:active
     scale-border(color-base, radius-base, color-base)
     p
       color color-white
-  // 点击涟漪效果
-  .ripple
-    background-color color-base
+

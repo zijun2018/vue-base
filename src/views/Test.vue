@@ -1,10 +1,12 @@
 <template>
-  <div class="app-test">
+  <div class="views-test">
     <p>{{desTxt}}：{{testName}}</p>
     <p>姓：{{firstName}}</p>
     <p>名：{{lastName}}</p>
     <p>全名：{{fullName}}</p>
     <p>年龄：{{testAge}}</p>
+
+    <div class="test-box"></div>
   </div>
 </template>
 

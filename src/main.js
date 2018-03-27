@@ -20,11 +20,7 @@ import './assets/js/iconfont'
 // 注册的全局组件
 import globalComponents from './components/global/main'
 Vue.use(globalComponents);
-// 支持点击水波纹效果
-import Ripple from 'vue-ripple-directive'
-Ripple.color = 'rgba(255, 255, 255, 0.5)';
-Ripple.zIndex = 1000;
-Vue.directive('ripple', Ripple);
+
 
 
 Vue.config.productionTip = false;

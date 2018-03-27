@@ -8,7 +8,7 @@ export default [
   // 根目录,加载全局组件
   {
     path: '/',
-    component: () => import('@/components/global/main'),
+    component: () => import('@/component/global/main'),
     redirect: {name: 'index'},
   },
   {

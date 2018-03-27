@@ -5,7 +5,7 @@
 <template>
   <div class="global-z-loading flex-center">
     <span class="fa fa-2x fa-spin fa-fw z-loading"
-          :class="computedType(type)"
+          :class="computedType(loadType)"
           aria-hidden="true"></span>
   </div>
 </template>
@@ -13,26 +13,20 @@
 <script>
   export default {
     name: "z-loading",
-    // type: 加载动画类型,具体可参照demo/GlobalComponent
-    props: ['type'],
+    // loadType: 加载动画类型,具体可参照demo/GlobalComponent
+    props: ['loadType'],
     data() {
       return {}
-    },
-
-    mounted() {
-
     },
 
     methods: {
       computedType (type) {
         switch (Number(type)) {
           case 1:
-            return 'fa-spinner';
-          case 2:
             return 'fa-circle-o-notch';
-          case 3:
+          case 2:
             return 'fa-refresh';
-          case 4:
+          case 3:
             return 'fa-cog';
           default:
             return 'fa-spinner fa-pulse'
