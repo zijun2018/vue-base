@@ -5,8 +5,10 @@
 import Vue from 'vue'
 import vuex from 'vuex'
 
-import component from './component'
-import global from './global'
+// 全局模块
+import global from './module-large'
+// 登录模块
+import login from './mudule/login'
 
 Vue.use(vuex);
 
@@ -14,8 +16,8 @@ const debug = process.env.NODE_ENV !== 'production';
 
 export default new vuex.Store({
   modules: {
-    component,
-    global
+    global,
+    login
   },
   strict: debug
 });
