@@ -1,10 +1,11 @@
 <template>
   <div class="views-test">
-    <z-loading :loadType="4" :loadMsg="loadMsg"></z-loading>
 
     <p>{{isShowLoading}}</p>
 
     <div class="test-box" @click="toggleShowLoading"></div>
+
+    <z-animation></z-animation>
 
   </div>
 </template>
@@ -38,7 +39,7 @@
     methods: {
       ...mapMutations(['showLoading', 'hideLoading']),
       toggleShowLoading() {
-        this.isShowLoading ? this.hideLoading() : this.showLoading({loadMsg: '放假了发掘了'});
+        this.isShowLoading ? this.hideLoading() : this.showLoading({loadType: 4, loadMsg: '放假了发掘了'});
       }
     }
   }

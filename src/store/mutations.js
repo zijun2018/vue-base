@@ -8,7 +8,7 @@ export default {
   showLoading(state, payload) {
     state.isShowLoading = true;
     state.loadMsg = payload && payload.loadMsg;
-    state.loadType = payload && Number(payload.loadType);
+    state.loadType = payload ? payload.loadType ? Number(payload.loadType) : 0 : 0;
   },
 
   // 隐藏全局组件ZLoading

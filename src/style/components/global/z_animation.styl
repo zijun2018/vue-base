@@ -3,3 +3,83 @@
 /* Time: 2018/3/28 */
 
 .global-z-animation
+  // square svg
+  .z-animation-square
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: .95rem;
+    height: 60px;
+    .css-square
+      position: absolute;
+      top: 48%;
+      width: .25rem;
+      height: .06rem;
+      background: color-base;
+      box-shadow: 0 .02rem .03rem 0 color-white;
+    .square1
+      left: 70px;
+      //-webkit-animation: dominos 1s 0.125s ease infinite
+      animation: dominos 1s 0.125s ease infinite
+    .square2
+      left: 60px;
+      //-webkit-animation: dominos 1s 0.3s ease infinite
+      animation: dominos 1s 0.3s ease infinite
+    .square3
+      left: 50px;
+      //-webkit-animation: dominos 1s 0.425s ease infinite
+      animation: dominos 1s 0.425s ease infinite
+    .square4
+      left: 40px;
+      //-webkit-animation: dominos 1s 0.540s ease infinite
+      animation: dominos 1s 0.540s ease infinite
+    .square5
+      left: 30px;
+      //-webkit-animation: dominos 1s 0.665s ease infinite
+      animation: dominos 1s 0.665s ease infinite
+    .square6
+      left: 20px;
+      //-webkit-animation: dominos 1s 0.79s ease infinite
+      animation: dominos 1s 0.79s ease infinite
+    .square7
+      left: 10px;
+      //-webkit-animation: dominos 1s 0.9s ease infinite
+      animation: dominos 1s 0.9s ease infinite
+    .square8
+      left: 0
+      //-webkit-animation: dominos 1s 1s ease infinite
+      animation: dominos 1s 1s ease infinite
+
+
+.bg-level
+  background-color rgba(0, 0, 0, .35)
+  .z-loading-icon
+    color color-white
+
+//animation spin 2s linear infinite;
+// 旋转动画
+@-webkit-keyframes spin
+  0%
+    transform rotate(0deg)
+  50%
+    transform rotate(180deg)
+  100%
+    transform rotate(360deg);
+
+@keyframes dominos
+  50%
+    opacity: 0.7
+  75%
+    transform: rotate(90deg)
+  /*    -webkit-transform: rotate(90deg)*/
+  80%
+    opacity: 1
+
+/*@-webkit-keyframes dominos
+  50%
+    opacity: 0.7;
+  75%
+    -webkit-transform: rotate(90deg)
+    transform: rotate(90deg)
+  80%
+    opacity: 1*/
