@@ -4,5 +4,16 @@
 
 export default {
 
-  
+  // 显示全局组件ZLoading
+  showLoading(state, payload) {
+    state.isShowLoading = true;
+    state.loadMsg = payload && payload.loadMsg;
+    state.loadType = payload && Number(payload.loadType);
+  },
+
+  // 隐藏全局组件ZLoading
+  hideLoading(state, payload) {
+    state.isShowLoading = false
+  }
+
 }

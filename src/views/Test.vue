@@ -1,12 +1,11 @@
 <template>
   <div class="views-test">
-    <p>{{desTxt}}：{{testName}}</p>
-    <p>姓：{{firstName}}</p>
-    <p>名：{{lastName}}</p>
-    <p>全名：{{fullName}}</p>
-    <p>年龄：{{testAge}}</p>
+    <z-loading :loadType="4" :loadMsg="loadMsg"></z-loading>
 
-    <div class="test-box"></div>
+    <p>{{isShowLoading}}</p>
+
+    <div class="test-box" @click="toggleShowLoading"></div>
+
   </div>
 </template>
 
@@ -18,43 +17,29 @@
 
     data() {
       return {
-        msg: this.$store.state.test.name,
+        // msg: isShowLoading,
         desTxt: '原名',
       }
     },
 
     computed: {
-      // localComputed
-      firstName() {
-        return this.msg + '_first'
-      },
-      lastName() {
-        return this.msg + '_last'
-      },
+      // local
 
-      // globalState
-      ...mapState({
-        testName: state => state.test.name,
-        testAge: state => state.test.age
-      }),
+      // global
+      ...mapState(['isShowLoading', 'loadType', 'loadMsg'])
 
-      // globalComputed
-      ...mapGetters(['fullName'])
     },
 
     mounted() {
-      setTimeout(() => {
-        this.desTxt = '变更后的姓名';
-        this.CONSTRUCTION({firstName: 'lalala', lastName: 'hahaha'});
-        this.changeName({firstName: 'liu', lastName: 'jing'})
-      }, 3000);
 
 
     },
 
     methods: {
-      ...mapMutations(['CONSTRUCTION']),
-      ...mapActions(['changeName']),
+      ...mapMutations(['showLoading', 'hideLoading']),
+      toggleShowLoading() {
+        this.isShowLoading ? this.hideLoading() : this.showLoading({loadMsg: '放假了发掘了'});
+      }
     }
   }
 </script>

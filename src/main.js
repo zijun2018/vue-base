@@ -20,7 +20,13 @@ import './assets/js/iconfont'
 // 注册的全局组件
 import globalComponents from './components/global/main'
 Vue.use(globalComponents);
-
+// 遍历路由，设置title
+router.beforeEach((to, from, next) => {
+  if (to.meta.title) {
+    document.title = to.meta.title
+  }
+  next()
+});
 
 
 Vue.config.productionTip = false;

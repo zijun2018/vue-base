@@ -3,6 +3,7 @@
 /* Time: 2018/3/27 */
 
 export default {
-
-  
+  someGetter(state, getters, rootState, rootGetters) {
+    console.log(state)
+  }
 }

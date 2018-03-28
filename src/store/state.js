@@ -3,11 +3,9 @@
 /* Time: 2018/3/27 */
 
 export default {
-  namespaced: true,
-  // 全局state
-  state(){
-    return{
 
-    }
-  }
+  // 全局ZLoading组件相关
+  isShowLoading: false,
+  loadType: 0,
+  loadMsg: '',
 }

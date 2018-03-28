@@ -8,23 +8,26 @@ export default [
   // 根目录,加载全局组件
   {
     path: '/',
-    component: () => import('@/component/global/main'),
+    component: () => import('@/components/global/main'),
     redirect: {name: 'index'},
   },
   {
     path: '/index',
     name: 'index',
-    component: () => import('@/views/Index')
+    component: () => import('@/views/Index'),
+    meta: {title: '首页'}
   },
   // 测试页面
   {
     path: '/test',
     name: 'test',
-    component: () => import('@/views/Test')
+    component: () => import('@/views/Test'),
+    meta: {title: '测试'}
   },
   // 404错误页面
   {
     path: '*',
-    component: () => import('@/views/Error')
+    component: () => import('@/views/Error'),
+    meta: {title: 'error'}
   }
 ]
