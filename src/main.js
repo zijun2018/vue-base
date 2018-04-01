@@ -27,6 +27,12 @@ router.beforeEach((to, from, next) => {
   }
   next()
 });
+// 支持图片懒加载,及全局设置
+import VueLazyLoad from 'vue-lazyload'
+Vue.use(VueLazyLoad, {
+  error: require('./assets/images/error-load.png'),
+  loading: require('./assets/images/loading.gif'),
+});
 
 
 Vue.config.productionTip = false;
